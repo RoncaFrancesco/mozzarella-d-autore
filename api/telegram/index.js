@@ -16,13 +16,13 @@ if (process.env.VERCEL_URL) {
     bot.setWebHook(WEBHOOK_URL);
 }
 
-// Catalogo prodotti
+// Catalogo prodotti - MODIFICA QUESTI PRODOTTI CON I TUOI
 const catalogo = [
-    { nome: "Mozzarella di Bufala DOP", prezzo: "€5.00", descrizione: "Fresca produzione quotidiana" },
-    { nome: "Burrata", prezzo: "€7.00", descrizione: "Crema di burro interna" },
+    { nome: "Mozzarella di Bufala DOP", prezzo: "€5.00", descrizione: "Fresca produzione quotidiana 250g" },
+    { nome: "Burrata di Bufala", prezzo: "€7.50", descrizione: "Crema di burro interna 300g" },
     { nome: "Treccia di Bufala", prezzo: "€6.00", descrizione: "Forma a treccia 250g" },
-    { nome: "Ricotta di Bufala", prezzo: "€4.50", descrizione: "Fresca e cremosa" },
-    { nome: "Scamorza Affumicata", prezzo: "€5.50", descrizione: "Affumicatura naturale" }
+    { nome: "Ricotta di Bufala", prezzo: "€4.50", descrizione: "Fresca e cremosa 500g" },
+    { nome: "Scamorza Affumicata", prezzo: "€5.50", descrizione: "Affumicatura naturale 400g" }
 ];
 
 // Funzione per creare menu con pulsanti

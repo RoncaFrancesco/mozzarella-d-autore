@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/telegram/index.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/test/index.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}
