@@ -33,7 +33,7 @@ module.exports = async (req, res) => {
             responseText = `🚚 **Informazioni Consegna**\n\n• Orari: 9:00-12:00 | 12:00-15:00 | 17:00-20:00\n• Zone: Tutta Italia\n• Costo: Gratuita per ordini sopra €20\n• Pagamento: Contanti, Satispay, PayPal\n\nOrdina ora! 📱`;
         } else if (text.toLowerCase().includes('info') || text.toLowerCase().includes('chi siete')) {
             responseText = `ℹ️ **Chi Siamo**\n\n🧀 **Mozzarella d'Autore**\nTradizione artigianale dal 1958\n\n📍 Produzione in Campania\n🐄 100% bufala campana DOP\n✅ Qualità certificata\n\n📞 Contatti:\n• Telegram: @Fr3nk090`;
-        } else if (/\d+/.test(text) && (text.toLowerCase().includes('mozzarella') || text.toLowerCase().includes('burrata') || text.toLowerCase().includes('ordine'))) {
+        } else if (text.toLowerCase().includes('mozzarella') || text.toLowerCase().includes('burrata') || text.toLowerCase().includes('treccia') || text.toLowerCase().includes('ricotta') || text.toLowerCase().includes('scamorza') || text.toLowerCase().includes('ordine')) {
             // Notifica all'admin per ordini
             const username = message.from.username ? `@${message.from.username}` : 'Nessun username';
             try {
