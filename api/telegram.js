@@ -1,18 +1,20 @@
 const TelegramBot = require('node-telegram-bot-api');
 
-// Configurazione
-const token = '8360129399:AAHn4C1gje9fF82fGAqRWq11nvXWtMCi2vk';
-const adminUsername = 'Fr3nk090'; // Il tuo username per notifiche
+// Configurazione da variabili d'ambiente
+const token = process.env.TELEGRAM_BOT_TOKEN || '8360129399:AAHn4C1gje9fF82fGAqRWq11nvXWtMCi2vk';
+const adminUsername = process.env.ADMIN_USERNAME || 'Fr3nk090';
 
 // Crea il bot
 const bot = new TelegramBot(token);
 
 // Configura il webhook
-const WEBHOOK_URL = process.env.VERCEL_URL
-    ? `${process.env.VERCEL_URL}/api/telegram`
-    : 'https://localhost:3000/api/telegram';
+const WEBHOOK_URL = process.env.WEBHOOK_URL ||
+    (process.env.VERCEL_URL ? `${process.env.VERCEL_URL}/api/telegram` : 'https://localhost:3000/api/telegram');
 
-bot.setWebHook(WEBHOOK_URL);
+// Imposta il webhook se non siamo in locale
+if (process.env.VERCEL_URL) {
+    bot.setWebHook(WEBHOOK_URL);
+}
 
 // Catalogo prodotti
 const catalogo = [
