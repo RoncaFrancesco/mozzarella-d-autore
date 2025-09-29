@@ -36,14 +36,17 @@ module.exports = async (req, res) => {
         } else if (text.toLowerCase().includes('mozzarella') || text.toLowerCase().includes('burrata') || text.toLowerCase().includes('treccia') || text.toLowerCase().includes('ricotta') || text.toLowerCase().includes('scamorza') || text.toLowerCase().includes('ordine')) {
             // Notifica all'admin per ordini
             const username = message.from.username ? `@${message.from.username}` : 'Nessun username';
+
+            // Prima risponde al cliente
+            responseText = `🛒 **Ordine Ricevuto!** 🛒\n\nGrazie! Il tuo ordine:\n"${text}"\n\n📞 Un nostro operatore ti contatterà a breve per:\n• Confermare disponibilità\n• Definire orario consegna\n• Comunicare il totale\n\n⏰ Risposta entro 5-10 minuti\n\nGrazie! 🧀✨`;
+
+            // Poi invia la notifica all'admin in background
             try {
                 await sendMessage('235649869', `🛒 **NUOVO ORDINE!** 🛒\n\n👤 Cliente: ${firstName}\n🔗 Username: ${username}\n📝 Ordine: "${text}"\n\n⚠️ Rispondi al cliente quanto prima!`);
-                console.log('Notifica admin inviata con successo');
+                console.log('✅ Notifica admin inviata con successo');
             } catch (adminError) {
-                console.log('Impossibile notificare admin:', adminError.message);
+                console.error('❌ Errore notifica admin:', adminError.message);
             }
-
-            responseText = `🛒 **Ordine Ricevuto!** 🛒\n\nGrazie! Il tuo ordine:\n"${text}"\n\n📞 Un nostro operatore ti contatterà a breve per:\n• Confermare disponibilità\n• Definire orario consegna\n• Comunicare il totale\n\n⏰ Risposta entro 5-10 minuti\n\nGrazie! 🧀✨`;
         } else {
             responseText = `🧀 Ciao ${firstName}! Sono il bot di Mozzarella d'Autore.\n\nPosso aiutarti con:\n📋 Catalogo prodotti\n🛒 Effettua un ordine\n🚚 Info consegna\nℹ️ Chi siamo\n\nCosa ti interessa? 😊`;
         }
