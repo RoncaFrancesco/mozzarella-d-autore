@@ -1,0 +1,5 @@
+Placeholder for images directory.
+Add actual product images here:
+- hero-bg.jpg (for homepage hero background)
+- azienda.jpg (for company image)
+- products/ folder with product images (mozzarella-classica-125.jpg, etc.)

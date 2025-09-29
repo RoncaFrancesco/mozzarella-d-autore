@@ -1,0 +1,31 @@
+{
+  "azienda": {
+    "nome": "Azienda Agricola Mozzarella d'Autore",
+    "slogan": "Tradizione di famiglia, eccellenza DOP",
+    "descrizione": "Produciamo mozzarella di bufala campana DOP con amore e passione da tre generazioni",
+    "indirizzo": "Via della Mozzarella, 123 - 84030 Paestum (SA)",
+    "telefono": "+39 123 456 7890",
+    "email": "info@mozzarelladautore.it",
+    "piva": "IT 12345678901",
+    "certificazioni": ["DOP", "HACCP", "Biologico"]
+  },
+  "consegna": {
+    "modalita": ["Ritiro in azienda", "Consegna locale"],
+    "costi": {
+      "ritiro": 0,
+      "consegna": 3.00,
+      "gratuita_sopra": 30
+    },
+    "tempi": "24-48 ore lavorative",
+    "aree": ["Paestum", "Agropoli", "Capaccio", "Castellabate"]
+  },
+  "pagamento": {
+    "modalita": ["Contanti", "Bonifico bancario", "Satispay"],
+    "note": "Pagamento alla consegna o anticipato"
+  },
+  "social": {
+    "facebook": "https://facebook.com/mozzarelladautore",
+    "instagram": "https://instagram.com/mozzarelladautore",
+    "whatsapp": "+39 123 456 7890"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "mozzarella-autore-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot per Mozzarella d'Autore - gestione ordini mozzarella di bufala campana DOP",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "mozzarella",
+    "bufala",
+    "DOP",
+    "food",
+    "delivery",
+    "italy"
+  ],
+  "author": "Mozzarella d'Autore",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.61.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+Questo è un file zip che contiene tutto il progetto del bot Telegram.
+
+Per installare:
+1. Estrai questo file zip
+2. Vai nella cartella BOT-COMPLETO/bot
+3. Segui le istruzioni nel file README-BOT.md
+
+Contenuto:
+- bot/bot.js (codice principale)
+- bot/config.json (configurazione)
+- bot/package.json (dipendenze)
+- bot/README-BOT.md (istruzioni)
+- bot/start.bat (script avvio)
+- bot/test-bot.js (test configurazione)

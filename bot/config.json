@@ -1,0 +1,58 @@
+{
+  "token": "8355140064:AAHEtQKj93rEa9GGhL_xmp4Dq3XwxLfYJ9g",
+  "admin_chat_id": "",
+  "bot_username": "MozzarellaAutoreBot",
+  "welcome_message": "🧀 Benvenuto su *Mozzarella d'Autore*! 🧀\n\nProduttore diretto di mozzarella di bufala campana DOP dal 1950.\n\nCosa posso fare per te?",
+  "delivery_provinces": ["CE", "SA", "FU", "BN", "AV"],
+  "delivery_slots": [
+    {"id": "9-12", "label": "9:00 - 12:00"},
+    {"id": "12-15", "label": "12:00 - 15:00"},
+    {"id": "17-20", "label": "17:00 - 20:00"}
+  ],
+  "payment_methods": [
+    {"id": "cash", "label": "Contanti alla consegna"},
+    {"id": "satispay", "label": "Satispay"},
+    {"id": "paypal", "label": "PayPal"}
+  ],
+  "products": [
+    {
+      "id": "mozzarella",
+      "name": "Mozzarella di Bufala DOP",
+      "description": "Fresca produzione quotidiana",
+      "price": 10.00,
+      "unit": "pz",
+      "image": "https://example.com/mozzarella.jpg"
+    },
+    {
+      "id": "bocconcini",
+      "name": "Bocconcini di Bufala",
+      "description": "Formato piccolo, perfetto per antipasti",
+      "price": 8.00,
+      "unit": "vasetto",
+      "image": "https://example.com/bocconcini.jpg"
+    },
+    {
+      "id": "treccia",
+      "name": "Treccia di Bufala",
+      "description": "Formatura tradizionale a treccia",
+      "price": 12.00,
+      "unit": "pz",
+      "image": "https://example.com/treccia.jpg"
+    },
+    {
+      "id": "ricotta",
+      "name": "Ricotta di Bufala",
+      "description": "Fresca e cremosa",
+      "price": 6.00,
+      "unit": "vasetto",
+      "image": "https://example.com/ricotta.jpg"
+    }
+  ],
+  "order_states": {
+    "pending": "📝 In attesa",
+    "confirmed": "✅ Confermato",
+    "preparing": "🧀 In preparazione",
+    "delivering": "🚚 In consegna",
+    "completed": "✨ Consegnato"
+  }
+}

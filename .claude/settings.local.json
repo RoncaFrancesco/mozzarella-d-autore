@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start:*)",
+      "Bash(findstr:*)",
+      "Bash(curl:*)",
+      "Bash(node:*)",
+      "Bash(rm:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

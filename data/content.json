@@ -1,0 +1,78 @@
+{
+  "homepage": {
+    "hero": {
+      "titolo": "Mozzarella di Bufala Campana DOP",
+      "sottotitolo": "Tradizione artigianale dal 1950",
+      "descrizione": "Scopri il gusto autentico della mozzarella di bufala campana DOP, prodotta con latte fresco delle nostre bufale secondo la tradizione di famiglia.",
+      "cta": "Scopri i Nostri Prodotti"
+    },
+    "chi_siamo": {
+      "titolo": "La Nostra Storia",
+      "sottotitolo": "Tre generazioni di passione",
+      "testo": "L'Azienda Agricola Mozzarella d'Autore nasce nel 1950 quando il nonno Antonio iniziò a produrre mozzarella con il latte delle poche bufale che possedeva. Oggi, con oltre 70 anni di esperienza, continuiamo a seguire i metodi tradizionali, garantendo un prodotto di eccellenza certificato DOP."
+    },
+    "processo": {
+      "titolo": "Il Nostro Processo",
+      "passi": [
+        {
+          "titolo": "Mungitura",
+          "descrizione": "Latte fresco raccolto due volte al giorno dalle nostre bufale"
+        },
+        {
+          "titolo": "Trasformazione",
+          "descrizione": "Processo artigianale secondo la tradizione campana"
+        },
+        {
+          "titolo": "Formatura",
+          "descrizione": "Modellatura a mano dei singoli pezzi"
+        },
+        {
+          "titolo": "Confezionamento",
+          "descrizione": "Imballaggio in liquido di governo per mantenere freschezza"
+        }
+      ]
+    }
+  },
+  "prodotti": {
+    "titolo": "I Nostri Prodotti",
+    "sottotitolo": "Freschezza garantita ogni giorno",
+    "filtri": {
+      "categoria": "Filtra per categoria",
+      "disponibilita": "Solo prodotti disponibili",
+      "prezzo": "Ordina per tipologia"
+    }
+  },
+  "ordini": {
+    "titolo": "La Nostra Mozzarella",
+    "sottotitolo": "Scopri la tradizione e assapora la freschezza",
+    "note": "* Produzione artigianale quotidiana",
+    "campi_obbligatori": {
+      "nome": "Nome e Cognome",
+      "email": "Email",
+      "telefono": "Telefono",
+      "indirizzo": "Indirizzo completo",
+      "citta": "Città",
+      "cap": "CAP",
+      "provincia": "Provincia"
+    }
+  },
+  "contatti": {
+    "titolo": "Contatti",
+    "orari": "Aperti dal martedì alla domenica, 7:00-19:00",
+    "note": "Chiuso il lunedì"
+  },
+  "faq": [
+    {
+      "domanda": "Quanto dura la mozzarella?",
+      "risposta": "La mozzarella di bufala va consumata preferibilmente entro 2-3 giorni dalla produzione."
+    },
+    {
+      "domanda": "Consegnate anche fuori provincia?",
+      "risposta": "Attualmente consegniamo solo nella zona del Cilento."
+    },
+    {
+      "domanda": "Posso venire a ritirare direttamente in azienda?",
+      "risposta": "Sì, benvenuti! Vi aspettiamo in azienda per assaggiare i nostri prodotti."
+    }
+  ]
+}
