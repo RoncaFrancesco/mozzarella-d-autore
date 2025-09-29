@@ -42,7 +42,9 @@ module.exports = async (req, res) => {
 
             // Poi invia la notifica all'admin in background
             try {
-                await sendMessage('235649869', `🛒 **NUOVO ORDINE!** 🛒\n\n👤 Cliente: ${firstName}\n🔗 Username: ${username}\n📝 Ordine: "${text}"\n\n⚠️ Rispondi al cliente quanto prima!`);
+                // Rimuoviamo il markdown per evitare errori di parsing
+                const notificationText = `🛒 NUOVO ORDINE! 🛒\n\n👤 Cliente: ${firstName}\n🔗 Username: ${username}\n📝 Ordine: "${text}"\n\n⚠️ Rispondi al cliente quanto prima!`;
+                await sendMessage('235649869', notificationText);
                 console.log('✅ Notifica admin inviata con successo');
             } catch (adminError) {
                 console.error('❌ Errore notifica admin:', adminError.message);
@@ -51,7 +53,7 @@ module.exports = async (req, res) => {
             responseText = `🧀 Ciao ${firstName}! Sono il bot di Mozzarella d'Autore.\n\nPosso aiutarti con:\n📋 Catalogo prodotti\n🛒 Effettua un ordine\n🚚 Info consegna\nℹ️ Chi siamo\n\nCosa ti interessa? 😊`;
         }
 
-        await sendMessage(chatId, responseText);
+        await sendMessage(chatId, responseText, true);
         console.log('Risposta inviata con successo');
         res.status(200).send('OK');
 
@@ -61,9 +63,10 @@ module.exports = async (req, res) => {
     }
 };
 
-function sendMessage(chatId, text) {
+function sendMessage(chatId, text, useMarkdown = false) {
     return new Promise((resolve, reject) => {
-        const url = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}&parse_mode=Markdown`;
+        const parseMode = useMarkdown ? '&parse_mode=Markdown' : '';
+        const url = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}${parseMode}`;
 
         https.get(url, (res) => {
             let data = '';
