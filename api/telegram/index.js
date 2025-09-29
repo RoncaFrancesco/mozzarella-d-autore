@@ -34,11 +34,19 @@ module.exports = async (req, res) => {
         } else if (text.toLowerCase().includes('info') || text.toLowerCase().includes('chi siete')) {
             responseText = `ℹ️ **Chi Siamo**\n\n🧀 **Mozzarella d'Autore**\nTradizione artigianale dal 1958\n\n📍 Produzione in Campania\n🐄 100% bufala campana DOP\n✅ Qualità certificata\n\n📞 Contatti:\n• Telegram: @Fr3nk090`;
         } else if (/\d+/.test(text) && (text.toLowerCase().includes('mozzarella') || text.toLowerCase().includes('burrata') || text.toLowerCase().includes('ordine'))) {
-            // Notifica all'admin per ordini (rimuovi questa riga se non hai il chat_id dell'admin)
+            // Notifica all'admin per ordini
             try {
-                await sendMessage('Fr3nk090', `🛒 **NUOVO ORDINE!** 🛒\n\n👤 Cliente: ${firstName}\n📝 Ordine: "${text}"\n\n⚠️ Rispondi al cliente quanto prima!`);
+                await sendMessage('@Fr3nk090', `🛒 **NUOVO ORDINE!** 🛒\n\n👤 Cliente: ${firstName}\n📝 Ordine: "${text}"\n\n⚠️ Rispondi al cliente quanto prima!`);
+                console.log('Notifica admin inviata con successo');
             } catch (adminError) {
                 console.log('Impossibile notificare admin:', adminError.message);
+                // Prova con formato alternativo
+                try {
+                    await sendMessage('Fr3nk090', `🛒 **NUOVO ORDINE!** 🛒\n\n👤 Cliente: ${firstName}\n📝 Ordine: "${text}"\n\n⚠️ Rispondi al cliente quanto prima!`);
+                    console.log('Notifica admin inviata con formato alternativo');
+                } catch (error2) {
+                    console.log('Entrambi i formati hanno fallito:', error2.message);
+                }
             }
 
             responseText = `🛒 **Ordine Ricevuto!** 🛒\n\nGrazie! Il tuo ordine:\n"${text}"\n\n📞 Un nostro operatore ti contatterà a breve per:\n• Confermare disponibilità\n• Definire orario consegna\n• Comunicare il totale\n\n⏰ Risposta entro 5-10 minuti\n\nGrazie! 🧀✨`;
