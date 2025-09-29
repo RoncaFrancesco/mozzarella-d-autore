@@ -35,8 +35,9 @@ module.exports = async (req, res) => {
             responseText = `ℹ️ **Chi Siamo**\n\n🧀 **Mozzarella d'Autore**\nTradizione artigianale dal 1958\n\n📍 Produzione in Campania\n🐄 100% bufala campana DOP\n✅ Qualità certificata\n\n📞 Contatti:\n• Telegram: @Fr3nk090`;
         } else if (/\d+/.test(text) && (text.toLowerCase().includes('mozzarella') || text.toLowerCase().includes('burrata') || text.toLowerCase().includes('ordine'))) {
             // Notifica all'admin per ordini
+            const username = message.from.username ? `@${message.from.username}` : 'Nessun username';
             try {
-                await sendMessage('235649869', `🛒 **NUOVO ORDINE!** 🛒\n\n👤 Cliente: ${firstName}\n📝 Ordine: "${text}"\n\n⚠️ Rispondi al cliente quanto prima!`);
+                await sendMessage('235649869', `🛒 **NUOVO ORDINE!** 🛒\n\n👤 Cliente: ${firstName}\n🔗 Username: ${username}\n📝 Ordine: "${text}"\n\n⚠️ Rispondi al cliente quanto prima!`);
                 console.log('Notifica admin inviata con successo');
             } catch (adminError) {
                 console.log('Impossibile notificare admin:', adminError.message);
